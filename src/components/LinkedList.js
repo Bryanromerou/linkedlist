@@ -10,9 +10,18 @@ class LinkedList extends Component {
     }
     render() {
         return (
+            <>
             <div className= "linkedList">
                 {this.state.head}
             </div>
+            <input 
+            onChange={(event) => this.setState({ inputVal: event.target.value })}
+            className="form_input" 
+            type="text" 
+            placeholder="Enter New Input!"
+            value={this.state.inputVal}
+            />
+            </>
         );
     }
 }
